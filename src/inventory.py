@@ -6,8 +6,8 @@ from item import Item
 
 
 class Inventory():
-    def __init__(self, inventory=[]):
-        self.inventory = inventory
+    def __init__(self, inventory=None):
+        self.inventory = inventory if type(inventory).__name__=="list" else []
 
     def get_inventory(self):
         return self.inventory
